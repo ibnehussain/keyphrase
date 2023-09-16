@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Key Phrase Extraction</title>
+</head>
+<body>
+    <h1>Key Phrase Extraction</h1><!DOCTYPE html>
+    <html>
+    <head>
+        <title>Text Analysis</title>
+    </head>
+    <body>
+        <h1>Text Analysis</h1>
+        <form method="post">
+            <textarea name="text" rows="4" cols="50">{{ text }}</textarea>
+            <br>
+            <input type="submit" value="Analyze Text">
+        </form>
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+        <h2>Category:</h2>
+        <p>{{ category }}</p>
+    </body>
+    </html>
+    
+    <form method="post">
+        <textarea name="text" rows="4" cols="50">{{ text }}</textarea>
+        <br>
+        <input type="submit" value="Extract Key Phrases">
+    </form>
+    <h2>Extracted Key Phrases:</h2>
+    <ul>
+        {% for phrase in key_phrases %}
+        <li>{{ phrase }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
